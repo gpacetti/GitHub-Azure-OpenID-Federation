@@ -1,0 +1,53 @@
+name: Azure OIDC Managed Identity Demo
+
+on: [workflow_dispatch]
+
+
+
+permissions:
+
+  id-token: write
+
+  contents: read
+
+
+
+jobs:
+
+  demo:
+
+    runs-on: ubuntu-latest
+
+    # Note: this needs to match the environment where the secrets are stored
+
+    environment: Azure
+
+    steps:
+
+      - name: "Azure PowerShell login"
+
+        uses: azure/login@v2
+
+        with:
+
+          client-id: ${{ secrets.CLIENT_ID }}
+
+          tenant-id: ${{ secrets.TENANT_ID }}
+
+          subscription-id: ${{ secrets.SUBSCRIPTION_ID }}
+
+          enable-AzPSSession: true
+
+
+
+      - name: "Get resource groups"
+
+        uses: azure/powershell@v2
+
+        with:
+
+          inlineScript: |
+
+            Get-AzResourceGroup            
+
+          azPSVersion: "latest"
