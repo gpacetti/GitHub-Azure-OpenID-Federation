@@ -6,7 +6,7 @@
 
 Connect-AzAccount # Follow the steps needed to sign in
 
-Set-AzContext -SubscriptionId "eb38b636-105c-41e3-b705-87029297ad99" # Replace with subscription idof the target subscription
+Set-AzContext -SubscriptionId "" # Replace with subscription idof the target subscription
 
 $ResourceGroupName  = "sw-avm-sandbox-sand-rg-we" # Name of a new resource group sw-<workload>-<appenv>-<app>-rg-<#optional#>
 
