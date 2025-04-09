@@ -14,7 +14,7 @@ $Location           = "westeurope"          # Location for the resource grop
 
 $IdentityName       = "sw-avm-sandbox-github-rg-we-lzenv-mi"   # Name of the Managed Identity sw-<workload>-<appenv>-<app>-<resourcetype>-<#optional#>-<region>-<lzenv>-<provider>
 
-$GhUserName         = "giuseppe.pacetti@outlook.it"     # Your GitHub username
+$GhUserName         = "gpacetti"     # Your GitHub username
 
 $GhRepoName         = "Playground"   # Name of your existing repository
 
